@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    #chicken {
+      text-align: center;
+      padding-top: 100px;
+
+    }
+
+    body {
+      background-color: orange;
+    }
+
+    #Title {
+      text-align: center;
+
+    }
+
+    #Clicker{
+      text-align:center;
+      font-size:30px;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="chicken"
+   src="https://www.fastfoodpost.com/wp-content/uploads/2023/03/Popeyes-Introduces-New-Family-Feast-Alongside-Returning-6.99-Big-Box-Featuring-Chicken-Nuggets-Or-Bone-In-Chicken.jpg"
+</img>
+
+    <p id="Clicker">Score=0</p>
+    <button id="up" type = button>Upgrade</button>
+    <button id="at" type = button>Auto</button>
+</body>
+
+</html>
+<script>
+  document.addEventListener("chicken").addEventListener("clicker", addScore)
+  document.getElementById("up").addEventListener("clicker", upgrade)
+  document.getElementById("at").addEventListener("clicker", autoClicker)
+  var score = 0
+  var multiplier = 1
+  var cost = 10
+
+  function addScore() {
+    score = score + multiplier
+    document.getElementById("Clicker").innerText = score
+  }
+function upgrade(){
+  if(score>=10){
+    multiplier = multiplier + 1
+    score = score - 10
+  }
+}
+  function autoClicker(){
+
+  }
+</script>
