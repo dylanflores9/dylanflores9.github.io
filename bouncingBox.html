@@ -6,12 +6,12 @@
   <title>game</title>
   <style>
     #box {
-        width:60px;
-        height:60px;
+        width:4.5%;
+        height:7.9%;
         background-color:skyblue;
         position:absolute;
-        top:6000x;
-        left:600px;
+        top:60%;
+        left:60%;
     }
     body {
       background-color:grey;
@@ -24,21 +24,21 @@
 </body>
 </html>
 <script>
-  var x=600
-  var direction=1
-  var y=500
-  var move=1
+  var x=45
+  var direction=.1
+  var y=50
+  var move=.08
   document.getElementById("box").addEventListener("click",moveBox)
   setInterval(moveBox, 1)
   function moveBox(){
-    document.getElementById("box").style.top=y+"px"
-    document.getElementById("box").style.left=x+"px"
+    document.getElementById("box").style.top=y+"%"
+    document.getElementById("box").style.left=x+"%"
     x=x+direction
     if (x<=0){
       direction=direction*-1
       
     } 
-    if (x>=1380){
+    if (x>=94){
       direction=direction*-1
     }
     y=y+move
@@ -46,7 +46,7 @@
       move=move*-1
       
     } 
-    if (y>=730){
+    if (y>=91){
       move=move*-1
     }
   }
