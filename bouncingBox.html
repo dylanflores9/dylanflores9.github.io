@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>game</title>
   <style>
     #box {
-        width:4.5%;
-        height:7.9%;
-        background-color:skyblue;
-        position:absolute;
-        top:60%;
-        left:60%;
+      width: 4.5%;
+      height: 7.9%;
+      background-color: skyblue;
+      position: absolute;
+      top: 60%;
+      left: 60%;
     }
+
     body {
-      background-color:grey;
+      background-color: grey;
     }
-    
   </style>
 </head>
+
 <body>
-<div id="box" </div> 
+  <div id="box" </div>
 </body>
+
 </html>
 <script>
-  var x=45
-  var direction=.1
-  var y=50
-  var move=.08
-  document.getElementById("box").addEventListener("click",moveBox)
+  var x = 45
+  var speedX = .1
+  var speedY = .08
+  var direction = speedX
+  var y = 50
+  var move = speedY
+  document.getElementById("box").addEventListener("click", moveBox)
+  document.addEventListener("click", reset)
   setInterval(moveBox, 1)
-  function moveBox(){
-    document.getElementById("box").style.top=y+"%"
-    document.getElementById("box").style.left=x+"%"
-    x=x+direction
-    if (x<=0){
-      direction=direction*-1
-      
-    } 
-    if (x>=94){
-      direction=direction*-1
+  function moveBox() {
+    document.getElementById("box").style.top = y + "%"
+    document.getElementById("box").style.left = x + "%"
+    x = x + direction
+    if (x <= 0) {
+      direction = speedX 
+
     }
-    y=y+move
-    if (y<=0){
-      move=move*-1
-      
-    } 
-    if (y>=91){
-      move=move*-1
+    if (x >= 94) {
+      direction = -speedX
     }
+    y = y + move
+    if (y <= 0) {
+      move = speedY
+
+    }
+    if (y >= 91) {
+      move = -speedY
+    }
+  }
+  function reset() {
+y= 50
+x= 45
+speedX = speedX + .1/4
+speedY = speedY + .1/4
+direction = speedX
+move = speedY
   }
 </script>
