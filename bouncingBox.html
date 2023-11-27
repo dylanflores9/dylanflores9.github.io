@@ -18,11 +18,17 @@
     body {
       background-color: grey;
     }
+    #bruh{
+      width: 10%;
+      height:10%;
+    }
   </style>
 </head>
 
 <body>
+  <div id="bruh">
   <div id="box" </div>
+  </div>
 </body>
 
 </html>
@@ -34,7 +40,7 @@
   var y = 50
   var directiony = speedY
   document.getElementById("box").addEventListener("click", moveBox)
-  document.addEventListener("click", reset)
+  document.getElementById("bruh").addEventListener("click", reset)
   setInterval(moveBox, 1)
   function moveBox() {
     document.getElementById("box").style.top = y + "%"
