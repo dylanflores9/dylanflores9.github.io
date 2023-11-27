@@ -30,39 +30,39 @@
   var x = 45
   var speedX = .1
   var speedY = .08
-  var direction = speedX
+  var directionx = speedX
   var y = 50
-  var move = speedY
+  var directiony = speedY
   document.getElementById("box").addEventListener("click", moveBox)
   document.addEventListener("click", reset)
   setInterval(moveBox, 1)
   function moveBox() {
     document.getElementById("box").style.top = y + "%"
     document.getElementById("box").style.left = x + "%"
-    x = x + direction
+    x = x + directionx
     if (x <= 0) {
-      direction = speedX
+      directionx = speedX
 
     }
     if (x >= 94) {
-      direction = -speedX
+      directionx = -speedX
     }
-    y = y + move
+    y = y + directiony
     if (y <= 0) {
-      move = speedY
+      directiony = speedY
 
     }
     if (y >= 91) {
-      move = -speedY
+      directiony = -speedY
     }
   }
   function reset() {
-y= Math.floor(Math.random() * 80) + 1;
-x= Math.floor(Math.random() * 80) + 1;
-speedX = speedX + .1/4
-speedY = speedY + .1/4
-direction = speedX
-move = speedY
+    y = Math.floor(Math.random() * 80) + 1;
+    x = Math.floor(Math.random() * 80) + 1;
+    speedX = speedX + .1 / 4
+    speedY = speedY + .1 / 4
+    directionx = speedX *( Math.floor(Math.random()+.5) * 2 - 1)
+    directiony = speedY *( Math.floor(Math.random()+.5) * 2 - 1)
 
   }
 </script>
