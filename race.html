@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+    #car1{
+      width:150px;
+      height:130px;
+      position:absolute;
+      top:100px;
+      background-color:greenyellow;
+      
+    }
+    #car2{
+      width:170px;
+      height:130px;
+      position:absolute;
+      top:500px;
+    }
+   
+      
+  </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
+  <title>Racist</title>
 </head>
 <body>
-
+<img id="car1" src="https://assets-global.website-files.com/5b4a3b3971d099f78f362505/63ff47ec567202420a708280_2022-Ferrari-SF90-Stradale-Rosso-Corsa-ZFF95NLA6N0273902_090.jpg">
+<img id="car2" src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/revuelto/menu/menu_revuelto.png">
 </body>
 </html>
+<script>
+  var x = 0
+  var y = 0
+  var direction=50
+   document.getElementById("car1").addEventListener("click", moveCar1)
+   document.getElementById("car2").addEventListener("click", moveCar2)
+   function moveCar1() {
+    x=x+direction
+    document.getElementById("car1").style.left = x+"px"
+   }
+   function moveCar2() {
+    y=y+direction
+    document.getElementById("car2").style.left = y+"px"
+   }
+   
+   
+   
+
+
+     
+</script>
