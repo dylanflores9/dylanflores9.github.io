@@ -1,51 +1,97 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <style>
-    #car1{
-      width:150px;
-      height:130px;
-      position:absolute;
-      top:100px;
-      background-color:greenyellow;
-      
+    #car1 {
+      width: 150px;
+      height: 130px;
+      position: absolute;
+      top: 150px;
+
     }
-    #car2{
-      width:170px;
-      height:130px;
-      position:absolute;
-      top:500px;
+
+    #car2 {
+      width: 160px;
+      height: 130px;
+      position: absolute;
+      top: 300px;
     }
-   
+
+    #road {
+      width: 1400px;
+      height: 600px;
+    }
+
+    #bruh {
+      font-size: 40px;
+      text-align:center;
+      top: 200px;
+      position: absolute;
+      left:550px;
+      color:red;
+      border-style:solid;
+      border-color: white;
+      background-color:white;
       
+
+    
+    }
+    
+    
   </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Racist</title>
 </head>
+
 <body>
-<img id="car1" src="https://assets-global.website-files.com/5b4a3b3971d099f78f362505/63ff47ec567202420a708280_2022-Ferrari-SF90-Stradale-Rosso-Corsa-ZFF95NLA6N0273902_090.jpg">
-<img id="car2" src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/revuelto/menu/menu_revuelto.png">
+  <img id="car1" src="car.png">
+  <img id="car2"
+    src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/revuelto/menu/menu_revuelto.png">
+  <img id="road"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoHGVFyDAKcTgVW0qUqIxExsflS009dKM6XbMlMU6BGLCc8X9bNQIUfoeZDtXxhWEuuA:https://www.shutterstock.com/image-vector/race-track-start-finish-line-260nw-1167380755.jpg&usqp=CAU">
+  <div id="bruh"></div>
 </body>
+
 </html>
 <script>
   var x = 0
   var y = 0
-  var direction=50
-   document.getElementById("car1").addEventListener("click", moveCar1)
-   document.getElementById("car2").addEventListener("click", moveCar2)
-   function moveCar1() {
-    x=x+direction
-    document.getElementById("car1").style.left = x+"px"
-   }
-   function moveCar2() {
-    y=y+direction
-    document.getElementById("car2").style.left = y+"px"
-   }
-   
-   
-   
+  var direction = 50
+  document.addEventListener("keyup", handleClick)
+  document.addEventListener("keydown", moveCar1)
+  
+function handleClick(e) {
+  if (e.key === "r"){
+    window.location.reload();
+  }
+}
+
+  function moveCar1(e) {
+    console.log(e.key)
+    if (e.key === "s") {
+      x = x + direction
+      document.getElementById("car1").style.left = x + "px"
+      bruh()
+    }
+    console.log(e.key)
+    if (e.key === "l") {
+      y = y + direction
+      document.getElementById("car2").style.left = y + "px"
+      bruh()
+    }
+  }
+
+  function bruh() {
+    if (x >= 1200) { 
+      document.getElementById("bruh").innerText = "red car wins!" }
+    if (y >= 1200) { document.getElementById("bruh").innerText = "orange car wins!" }
+  }
 
 
-     
+
+
+
+
 </script>
