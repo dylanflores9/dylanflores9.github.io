@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bouncing box canvas</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="1000" height="800"></canvas>
+
+</body>
+
+</html>
+<script>
+    var canvas = document.getElementById("canvas")
+    var ctx = canvas.getContext("2d")
+
+    var x = []
+    var y = []
+    var directionX = 5
+    var directionY = 5
+
+    for (var i = 0; i < 100; i = i + 1) {
+
+        pushX = Math.floor(Math.random() * 1000) + 1
+        pushY = Math.floor(Math.random() * 800) + 1
+
+        x.push(pushX)
+        y.push(pushY)
+    }
+
+    setInterval(main, 15)
+
+    function main() {
+        ctx.clearRect(0, 0, 2000, 2000)
+        for (var i = 0; i < 100; i = i + 1) {
+
+          
+
+            ctx.fillRect(x[i], y[i], 50, 50)
+
+ if (x >= 600) {
+            directionX = -directionX
+        }
+        if (x <= 0) {
+            directionX = -directionX
+        }
+        if (y => 400) {
+            directionY = -directionY
+        }
+        if (y <= 0) {
+            directionY = -directionY
+        }
+        }
+
+       
+
+      
+
+        
+
+        
+    }
+
+</script>

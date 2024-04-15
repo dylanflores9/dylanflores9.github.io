@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+       #canvas {
+        position:absolute;
+        left:25%
+       })
+    </style>
+
+</head>
+
+<body>
+    <canvas id="canvas" width="700" height="600">
+
+
+<script>
+    var boxA = []
+    var boxB = []
+    var directionX
+    var directionY
+    var speedX
+    var speedY
+    var canvas = document.getElementById("canvas")
+    var ctx = canvas.getContext("2d")
+ctx.clearRect(0,0,600,700)
+        for (var i = 0; i < 100; i = i + 1) {
+            boxA.push(Math.random() * 650)
+            boxB.push(Math.random() * 550)
+            ctx.fillRect(boxA[i], boxB[i], 50, 50)
+        }
+        
+
+    
+
+            </script>
+        </canvas>
+    </body>
+</html>
