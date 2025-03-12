@@ -91,8 +91,6 @@ $(document).ready(function () {
  // TODO 3: Create reddify function
  function reddify(array1) { // Turns every RED value of each pixel to 200
   array1[RED] = 200
- 
- 
  }
  
  
