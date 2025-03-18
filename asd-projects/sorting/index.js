@@ -16,8 +16,8 @@ The CSS ids you will work with are:
 // TODO 2: Implement bubbleSort
 async function bubbleSort(array){
 var n = array.length;
-for(let i = 0, 1 < n - 1; i++){
-    for(let j = 0; j < n - i - 1; j++){
+for(var i = 0; i < n - 1; i++){
+    for(var j = 0; j < n - i - 1; j++){
         if (array[j] > array [j + 1]){
             swap(array, j, j + 1);
             updateCounter(bubbleCounter);
@@ -30,7 +30,7 @@ for(let i = 0, 1 < n - 1; i++){
 // TODO 3: Implement quickSort
 async function quickSort(array, low, high) {
     if (low < high) {
-        let pi = await partition(array, low, high);
+        var pi = await partition(array, low, high);
         await quickSort(array, low, pi - 1);
         await quickSort(array, pi + 1, high);
     }
@@ -39,8 +39,8 @@ async function quickSort(array, low, high) {
 
 // TODOs 4 & 5: Implement partition
 async function partition(array, low, high) {
-    let pivot = array[high]; // pivot
-    let i = (low - 1); // Index of smaller element
+    var pivot = array[high]; // pivot
+    var i = (low - 1); // Index of smaller element
 
     for (let j = low; j < high; j++) {
         // If current element is smaller than or equal to pivot
@@ -61,9 +61,10 @@ function swap (array,i,j){
  var temp = array[i];
  array[i] = array[j];
  array[j] = temp;
+ drawSwap(array, i, j);
 }
 
-drawSwap(array, i, j);
+
 
 ///////////////////////////////////////////////////////////////////////
 /////////////////////// YOUR WORK GOES ABOVE HERE /////////////////////
